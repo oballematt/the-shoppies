@@ -21,7 +21,7 @@ const Nominations = (props) => {
                     {props.nominations.length ? (
                         <div className="container-fluid d-flex flex-wrap justify-content-around align-items-center">
                             {props.nominations.map((nominations) =>
-                                <div className="image-container m-3">
+                                <div key={nominations.imdbID} className="image-container m-3">
                                     <div className="card" style={{ width: "18rem" }}>
                                         <img src={nominations.Poster} className="card-img-top" alt="movie-poster" />
                                         <div className="card-body">
