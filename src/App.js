@@ -37,9 +37,7 @@ function App() {
     if (nominations.length === 5) {
       document.getElementById("alert").style.setProperty("display", "flex")
     } else if (nominations.length < 5) {
-
       document.getElementById("alert").style.setProperty("display", "none")
-
     }
   }, [nominations])
 
@@ -55,7 +53,7 @@ function App() {
           <Nominations length={nominations.length} handleRemoveClick={removeMovie} removeNomination={RemoveNomination} nominations={nominations} />
         </div>
         <div className="row">
-          <ResultsList movies={movies} handleNominationsClick={nominateMovie} nominateButton={NominateButton} />
+          <ResultsList nominations={nominations} movies={movies} handleNominationsClick={nominateMovie} nominateButton={NominateButton} />
         </div>
       </div>
     </>

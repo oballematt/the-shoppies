@@ -2,8 +2,8 @@ import React from 'react'
 
 const Alert = () => {
     return (
-        <div className="alert alert-success none" id="alert" role="alert">
-                You've nominated 5 movies!
+        <div className="alert alert-success" id="alert" role="alert">
+            <strong>You have nominated 5 movies!</strong>
         </div>
     )
 }
