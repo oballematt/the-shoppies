@@ -7,7 +7,7 @@ const Nominations = (props) => {
     return (
         <>
             <div className="container-fluid d-flex flex-wrap justify-content-around align-items-center">
-                <Button onClick={() => setLgShow(true)}>Nominations {`(${props.length})`}</Button>
+                <button className="btn btn-outline-secondary btn-lg" style={{width:"300px", height:"100px" }}onClick={() => setLgShow(true)}>Nominations {`(${props.length})`}</button>
             </div>
 
             <Modal style={{ color: "black" }} size="lg" show={lgShow} onHide={() => setLgShow(false)}>
@@ -29,9 +29,9 @@ const Nominations = (props) => {
                                             <p className="card-text">{nominations.Year}</p>
                                         </div>
                                     </div>
-                                    <div onClick={() => props.handleRemoveClick(nominations)} className="overlay d-flex align-items-center justify-content-center">
+                                    <button onClick={() => props.handleRemoveClick(nominations)} className="overlay d-flex align-items-center justify-content-center btn btn-outline-secondary">
                                         <RemoveNomination />
-                                    </div>
+                                    </button>
                                 </div>
                             )}
                         </div>

@@ -23,9 +23,15 @@ function App() {
     getMovieRequest(movieSearch);
   }, [movieSearch]);
 
+
+  const saveLocalStorage = (items) => {
+    localStorage.setItem("nominated-movies", JSON.stringify(items))
+  }
+
   const nominateMovie = (movie) => {
     const newNominationsArray = [...nominations, movie];
     setNominations(newNominationsArray);
+    saveLocalStorage(newNominationsArray)
   }
 
   const removeMovie = (movie) => {
