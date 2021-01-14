@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Modal, Button } from "react-bootstrap"
+import { Modal } from "react-bootstrap"
 
 const Nominations = (props) => {
     const [lgShow, setLgShow] = useState(false);

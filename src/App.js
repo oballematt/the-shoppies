@@ -16,36 +16,42 @@ function App() {
     const responseJson = await response.json();
     if (responseJson.Search) {
       setMovies(responseJson.Search);
-    }
+    };
   };
 
   useEffect(() => {
     getMovieRequest(movieSearch);
   }, [movieSearch]);
 
+  useEffect(() => {
+      const nominatedMovies = JSON.parse(localStorage.getItem("nominated-movies"));
+        if (nominatedMovies) {
+          setNominations(nominatedMovies)
+        }
+  }, []);
 
-  const saveLocalStorage = (items) => {
+  const saveToLocalStorage = (items) => {
     localStorage.setItem("nominated-movies", JSON.stringify(items))
-  }
+  };
 
   const nominateMovie = (movie) => {
     const newNominationsArray = [...nominations, movie];
     setNominations(newNominationsArray);
-    saveLocalStorage(newNominationsArray)
-  }
+    saveToLocalStorage(newNominationsArray)
+  };
 
   const removeMovie = (movie) => {
     const newNominationsArray = nominations.filter((nominated) => nominated.imdbID !== movie.imdbID);
     setNominations(newNominationsArray);
-  }
+  };
 
   useEffect(() => {
     if (nominations.length === 5) {
       document.getElementById("alert").style.setProperty("display", "flex")
     } else if (nominations.length < 5) {
       document.getElementById("alert").style.setProperty("display", "none")
-    }
-  }, [nominations])
+    };
+  }, [nominations]);
 
 
   return (
