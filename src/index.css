@@ -2,6 +2,13 @@ body {
     background: #141414;
     color: #ffffff ;
 }
+
+@media only screen and (max-width: 600px){
+    .scroll > .row {
+        overflow-x: auto;
+        flex-wrap: nowrap
+    }
+}
  
   .image-container {
     position: relative;

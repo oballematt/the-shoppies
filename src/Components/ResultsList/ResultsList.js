@@ -11,7 +11,7 @@ const ResultsList = (props) => {
        <div className="container-fluid">
                 <h1 className="font">Results for {`"${text}"`}</h1>
             </div>
-       {props.movies.map((movie, index) =>
+       {props.movies.map((movie) =>
         <div key={movie.imdbID} className="image-container d-flex justify-content-center align-items-center m-3">
            <img src={movie.Poster} alt="movie-poster"></img>
                <NominateButton nominations={nominations} movie={movie} handleNominationsClick={props.handleNominationsClick} />
