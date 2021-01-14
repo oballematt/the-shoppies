@@ -24,10 +24,10 @@ function App() {
   }, [movieSearch]);
 
   useEffect(() => {
-      const nominatedMovies = JSON.parse(localStorage.getItem("nominated-movies"));
-        if (nominatedMovies) {
-          setNominations(nominatedMovies)
-        }
+    const nominatedMovies = JSON.parse(localStorage.getItem("nominated-movies"));
+    if (nominatedMovies) {
+      setNominations(nominatedMovies)
+    }
   }, []);
 
   const saveToLocalStorage = (items) => {
