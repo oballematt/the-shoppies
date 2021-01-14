@@ -66,7 +66,7 @@ function App() {
           <Nominations length={nominations.length} handleRemoveClick={removeMovie} removeNomination={RemoveNomination} nominations={nominations} />
         </div>
         <div className="row">
-          <ResultsList nominations={nominations} movies={movies} handleNominationsClick={nominateMovie} nominateButton={NominateButton} />
+          <ResultsList movieSearch={movieSearch} nominations={nominations} movies={movies} handleNominationsClick={nominateMovie} nominateButton={NominateButton} />
         </div>
       </div>
     </>
