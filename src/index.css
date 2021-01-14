@@ -30,4 +30,16 @@ body {
     text-align: center;
 }
 
+.rcorners {
+    border-radius: 1rem;
+    height: 3rem;
+  }
+
+  .font {
+      font-family:"impact, fantasy";
+      font-size: large;
+      letter-spacing: 2px;
+      color: #eeeeee;
+      font-variant: small-caps;
+  }
 

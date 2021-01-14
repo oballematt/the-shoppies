@@ -7,7 +7,7 @@ const ResultsList = (props) => {
     return (
        <>
        {props.movies.map((movie, index) =>
-        <div key={movie.imdbID} className=" image-container d-flex justify-content-center align-items-center m-3">
+        <div key={movie.imdbID} className="image-container d-flex justify-content-center align-items-center m-3">
            <img src={movie.Poster} alt="movie-poster"></img>
                <NominateButton nominations={nominations} movie={movie} handleNominationsClick={props.handleNominationsClick} />
        </div>
