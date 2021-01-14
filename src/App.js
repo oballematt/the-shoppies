@@ -37,12 +37,13 @@ function App() {
   const nominateMovie = (movie) => {
     const newNominationsArray = [...nominations, movie];
     setNominations(newNominationsArray);
-    saveToLocalStorage(newNominationsArray)
+    saveToLocalStorage(newNominationsArray);
   };
 
   const removeMovie = (movie) => {
     const newNominationsArray = nominations.filter((nominated) => nominated.imdbID !== movie.imdbID);
     setNominations(newNominationsArray);
+    saveToLocalStorage(newNominationsArray);
   };
 
   useEffect(() => {
