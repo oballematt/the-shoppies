@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import ResultsList from "./Components/ResultsList/ResultsList";
 import NominateButton from "./Components/NominateButton/NominateButton"
 import Nominations from "./Components/Nominations/Nominations";
-
+import RemoveNomination from "./Components/RemoveNomination/RemoveNomination"
+import Alert from "./Components/Alert/Alert"
 function App() {
   const [movies, setMovies] = useState([]);
   const [movieSearch, setMovieSearch] = useState('');
@@ -24,8 +25,23 @@ function App() {
 
   const nominateMovie = (movie) => {
     const newNominationsArray = [...nominations, movie];
-    setNominations(newNominationsArray)
+    setNominations(newNominationsArray);
   }
+
+  const removeMovie = (movie) => {
+    const newNominationsArray = nominations.filter((nominated) => nominated.imdbID !== movie.imdbID);
+    setNominations(newNominationsArray);
+  }
+
+  useEffect(() => {
+    if (nominations.length === 5) {
+      document.getElementById("alert").style.setProperty("display", "flex")
+    } else if (nominations.length < 5) {
+
+      document.getElementById("alert").style.setProperty("display", "none")
+
+    }
+  }, [nominations])
 
 
   return (
@@ -34,8 +50,9 @@ function App() {
         <SearchBar
           movieSearch={movieSearch}
           setMovieSearch={setMovieSearch} />
+        <Alert />
         <div className="row">
-          <Nominations nominations={nominations} />
+          <Nominations length={nominations.length} handleRemoveClick={removeMovie} removeNomination={RemoveNomination} nominations={nominations} />
         </div>
         <div className="row">
           <ResultsList movies={movies} handleNominationsClick={nominateMovie} nominateButton={NominateButton} />
