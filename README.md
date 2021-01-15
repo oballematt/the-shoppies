@@ -47,5 +47,5 @@
   ## Questions?
   
   If you have any questions, please contact me with the information below:
-
-  Github [@oballematt](https://github.com/oballematt)
+  Email: [oballematt@gmail.com](oballematt@gmail.com)
+  Github: [@oballematt](https://github.com/oballematt)
