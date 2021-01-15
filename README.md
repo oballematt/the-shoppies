@@ -7,6 +7,8 @@
 
   Nominate 5 of your favorite movies for the upcoming shoppie awards! 
 
+  Checkout the deployed project [here](https://theshoppies-mo.herokuapp.com)
+
   ![Search](src/assets/search.png)
   ![Nominate](src/assets/nominate.png)
   ![NominationsFull](src/assets/nominationsFull.png)
