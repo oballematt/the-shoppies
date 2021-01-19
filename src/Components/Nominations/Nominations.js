@@ -7,7 +7,7 @@ const Nominations = (props) => {
     return (
         <>
             <div className="container-fluid d-flex flex-wrap justify-content-around align-items-center font">
-                <button className="btn btn-outline-secondary btn-lg" style={{ width: "300px", height: "100px" }} onClick={() => setLgShow(true)}>Nominations {`(${props.length})`}</button>
+                <button className="btn btn-outline-secondary btn-lg" style={{ width: "300px", height: "100px" }} onClick={() => setLgShow(true)}>View Nominations {`(${props.length})`}</button>
             </div>
             <Modal style={{ color: "black" }} size="lg" show={lgShow} onHide={() => setLgShow(false)}>
                 <Modal.Header style={{ color: "white" }} className="bg-dark font" closeButton>

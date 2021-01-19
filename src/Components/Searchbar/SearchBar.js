@@ -8,7 +8,7 @@ const SearchBar = (props) => {
             <p>Nominate 5 movies  for the shoppies awards!</p>
             <hr className="my-4" />
             <div className="input-group">
-                <input type="text" style={{ fontSize: "larger" }} className="form-control rcorners" placeholder="Search for Movies!" onChange={(event) => props.setMovieSearch(event.target.value)} value={props.value} aria-describedby="basic-addon1" />
+                <input type="text" style={{ fontSize: "larger" }} className="form-control rcorners" placeholder="Search for Movies here!" onChange={(event) => props.setMovieSearch(event.target.value)} value={props.value} aria-describedby="basic-addon1" />
             </div>
         </div>
     )
